@@ -95,6 +95,36 @@ class practiceLL
         ptr2.next = new_node;
         new_node.next = ptr1;
     }
+    
+    void DeleteAtPosition(int n)
+    {
+        if(n==0)
+        {
+            head = head.next;
+        }
+        else
+        {
+            node ptr = head;
+            node ptr1 = head;
+            while(n >= 0 && ptr != null)
+            {
+                ptr1 = ptr;
+                ptr = ptr.next;
+                n--;
+            }
+            if(n>0 && ptr == null)
+            {
+                System.out.println("Position is Greater Than Length Of List !!");
+            }
+            else
+            {
+                ptr1.next = ptr.next;
+            }
+        }
+    }
+    
+    
+    
     public static void main(String args[])
     {
         practiceLL obj = new practiceLL();
@@ -131,6 +161,13 @@ class practiceLL
         obj.InsertBefore(4,4);
         obj.InsertBefore(5,5);
         obj.InsertBefore(3,3);
+        obj.LLtraversal();
+        System.out.println("\n");
+        obj.DeleteAtPosition(3);
+        obj.DeleteAtPosition(3);
+        obj.DeleteAtPosition(4);
+        obj.DeleteAtPosition(5);
+        obj.DeleteAtPosition(10);
         obj.LLtraversal();
         
         
