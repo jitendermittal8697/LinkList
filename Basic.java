@@ -123,7 +123,10 @@ class practiceLL
         }
     }
     
-    
+    void DeleteEntireList()
+    {
+        head = null;
+    }
     
     public static void main(String args[])
     {
@@ -168,6 +171,9 @@ class practiceLL
         obj.DeleteAtPosition(4);
         obj.DeleteAtPosition(5);
         obj.DeleteAtPosition(10);
+        obj.LLtraversal();
+        System.out.println("\n");
+        obj.DeleteEntireList();
         obj.LLtraversal();
         
         
