@@ -1,7 +1,7 @@
 # LinkList
   Insert Beginning,
   Delete,
-  Delete at Position
+  Delete at Position,
   Traversal,
   Insert End,
   Insert After,
