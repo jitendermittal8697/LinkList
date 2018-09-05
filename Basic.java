@@ -50,6 +50,10 @@ class practiceLL
     {
         node ptr1 = head;
         node ptr2 = head;
+        if(ptr1.data==data)
+        {
+            head=ptr1.next;
+        }
         while(ptr1.data != data)
         {
             ptr2 = ptr1;
