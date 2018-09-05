@@ -1,6 +1,6 @@
 # LinkList
-  Insert Beginning
-  Delete
-  Traversal
-  Insert End
+  Insert Beginning,
+  Delete,
+  Traversal,
+  Insert End,
   
