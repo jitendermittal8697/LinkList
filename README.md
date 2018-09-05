@@ -1,11 +1,12 @@
 # LinkList
-  Insert Beginning,
-  Delete,
-  Delete at Position,
-  Delete Entire List,
   Traversal,
+  Insert Beginning,
   Insert End,
   Insert After,
   Insert Before,
+  Delete Node,
+  Delete at Position,
+  Delete Entire List,
+  
   
   
