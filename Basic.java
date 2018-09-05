@@ -61,6 +61,40 @@ class practiceLL
         }
         ptr2.next = ptr1.next;
     }
+    
+    void InsertAfter(int data,int key)
+    {
+        node new_node = new node(data);
+        node ptr1 = head;
+        while(ptr1 != null && ptr1.data != key)
+        {
+            ptr1 = ptr1.next;
+        }
+        if(ptr1 == null)
+        {
+            System.out.println("Key Not Found");
+        }
+        else
+        {
+            node ptr2 = ptr1.next;
+            ptr1.next = new_node;
+            new_node.next = ptr2;
+        }
+    }
+     
+    void InsertBefore(int data,int key)
+    {
+        node new_node = new node(data);
+        node ptr1 = head;
+        node ptr2 = head;
+        while(ptr1.data != key && ptr1 != null)
+        {
+            ptr2 = ptr1;
+            ptr1 = ptr1.next;
+        }
+        ptr2.next = new_node;
+        new_node.next = ptr1;
+    }
     public static void main(String args[])
     {
         practiceLL obj = new practiceLL();
@@ -85,6 +119,20 @@ class practiceLL
         obj.DeleteNode(5);
         obj.DeleteNode(-1);
         obj.LLtraversal();
+        System.out.println("\n");
+        obj.InsertAfter(5,4);
+        obj.InsertAfter(6,5);
+        obj.InsertAfter(3,3);
+        obj.LLtraversal();
+        System.out.println("\n");
+        obj.InsertAfter(5,7);
+        obj.LLtraversal();
+        System.out.println("\n");
+        obj.InsertBefore(4,4);
+        obj.InsertBefore(5,5);
+        obj.InsertBefore(3,3);
+        obj.LLtraversal();
+        
         
     }
 }
